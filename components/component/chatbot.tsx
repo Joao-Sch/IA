@@ -19,9 +19,9 @@ export function Chatbot() {
       <div className="flex-1 overflow-auto p-6">
         {messages.length === 0 && (
           <div className="flex flex-col justify-center items-center h-full">
-            <Image src="/ai.png" alt="AI" width={80} height={80} />
+            <Image src="/logoI9.png" alt="AI" width={80} height={80} className="logo"/>
             <p className="text-lg text-muted-foreground mt-4">
-              Welcome to the Chatbot! Ask me anything.
+              Só pergunta ai, eu sou um livro aberto parceiro
             </p>
           </div>
         )}
@@ -30,8 +30,7 @@ export function Chatbot() {
             message.role === "assistant" ? (
               <div key={message.id} className="flex items-start gap-3">
                 <div className="p-2 border border-gray-700 rounded-full">
-                  <Image src="/ai.png" alt="AI" width={20} height={20} />
-                </div>
+                <Image src="/logoI9.png" alt="AI" width={20} height={20} className="rounded-full"/>                </div>
                 <div className="bg-muted rounded-lg p-3 max-w-[70%]">
                   <Markdown className="text-sm text-muted-foreground">
                     {message.content}
@@ -56,7 +55,7 @@ export function Chatbot() {
       >
         <div className="relative flex-1">
           <Textarea
-            placeholder="Type your message..."
+            placeholder="Me conte todos os seus segredos"
             className="rounded-lg pr-12 min-h-[64px]"
             rows={1}
             value={input}
